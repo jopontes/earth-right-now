@@ -4,12 +4,15 @@
    and renders the dashboard. No per-user API calls, no maps.
    ============================================================ */
 
-const DATA_URL = "data/extremes.json";
-const REFRESH_MS = 5 * 60 * 1000; // auto re-fetch the JSON every 5 minutes
+import { buildPayload } from "../scripts/build.mjs";
+
+const DATA_URL = "data/extremes.json"; // published snapshot — used only for the fast first paint
+const REFRESH_MS = 5 * 60 * 1000; // recompute live every 5 minutes
 const AGE_TICK_MS = 30 * 1000;    // keep the "x min ago" labels fresh
 let lastGeneratedAt = null;       // skip re-render when the data hasn't changed
 let lastData = null;              // kept so a language switch can re-render
 let hideTip = () => {};           // set by initTooltips; dismiss the custom tooltip
+let normalsCache = null;          // climatological baseline, fetched once for anomalies
 
 /* ============================================================
    i18n — English / Português / Español
@@ -411,7 +414,7 @@ function setBanner(show) {
     banner.id = "load-banner";
     banner.className = "banner";
     banner.textContent =
-      "Couldn't load data/extremes.json. Serve the folder over HTTP (e.g. node scripts/serve.mjs) so the browser can fetch the JSON.";
+      "Couldn't reach the weather service. Check your connection and hit ↻ Update to retry.";
     $(".shell").insertBefore(banner, $("#hero"));
   } else if (!show && banner) {
     banner.remove();
@@ -422,33 +425,43 @@ function setBanner(show) {
    Data loading — auto every REFRESH_MS, or on manual button click.
    Only re-renders when generatedAt actually changes (no flicker).
    ============================================================ */
-async function loadData({ manual = false } = {}) {
+// Recompute the extremes live, in the browser, straight from Open-Meteo.
+async function computeLive() {
+  if (!normalsCache) {
+    try { normalsCache = await (await fetch("data/normals.json")).json(); }
+    catch { normalsCache = { normals: {} }; }
+  }
+  return buildPayload(normalsCache);
+}
+
+function apply(data) {
+  lastData = data;
+  if (data.generatedAt !== lastGeneratedAt) {
+    lastGeneratedAt = data.generatedAt;
+    render(data);
+  }
+  updateAges();
+}
+
+async function loadData({ manual = false, initial = false } = {}) {
   const btn = $("#refresh-btn");
   if (manual) btn.classList.add("busy");
   const startedAt = performance.now();
   try {
-    // Manual click forces the backend to recompute fresh data first.
-    // No-op (404) on static hosting — we just re-read the JSON in that case.
-    if (manual) {
-      try { await fetch("/api/refresh", { method: "POST", cache: "no-store" }); } catch {}
+    // Instant first paint from the published snapshot, then recompute live.
+    if (initial) {
+      try {
+        const res = await fetch(DATA_URL, { cache: "no-store" });
+        if (res.ok) apply(await res.json());
+      } catch {}
     }
-    const res = await fetch(DATA_URL, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    lastData = data;
-
-    if (data.generatedAt !== lastGeneratedAt) {
-      lastGeneratedAt = data.generatedAt;
-      render(data);
-    }
-    updateAges();
+    apply(await computeLive()); // live → always a fresh generatedAt, so "updated" really moves
     setBanner(false);
   } catch (err) {
     console.error(err);
-    setBanner(true);
+    if (!lastData) setBanner(true); // keep showing what we have on a transient network blip
   } finally {
     if (manual) {
-      // Keep the spinner visible briefly so the click always feels responsive.
       const wait = Math.max(0, 550 - (performance.now() - startedAt));
       setTimeout(() => btn.classList.remove("busy"), wait);
     }
@@ -541,14 +554,16 @@ function boot() {
 
   startClock();
   $("#refresh-btn").addEventListener("click", () => loadData({ manual: true }));
-  loadData();
+  loadData({ initial: true });
   setInterval(() => loadData(), REFRESH_MS);
   setInterval(updateAges, AGE_TICK_MS);
 
-  // Refresh immediately when the tab regains focus after being away.
+  // Recompute immediately when the tab regains focus after being away.
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") loadData();
   });
 }
 
-document.addEventListener("DOMContentLoaded", boot);
+// Module scripts are deferred, so the DOM may already be parsed by now.
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+else boot();

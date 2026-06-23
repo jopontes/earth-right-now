@@ -123,8 +123,6 @@ body::before {
   transition: filter 1.2s var(--ease);
 }
 .brand-mark svg { width: 46px; height: 46px; overflow: visible; }
-.brand-mark .gs1 { stop-color: var(--accent); }
-.brand-mark .gs2 { stop-color: var(--accent-2); }
 .brand-title {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(27px, 4.2vw, 40px); font-weight: 700; letter-spacing: -0.03em; margin: 0; line-height: 0.96;
