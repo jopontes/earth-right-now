@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="neutral">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c1122" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Earth Right Now... the planet's records</title>
+  <meta name="description" content="A real-time snapshot of the most intense weather happening on Earth this hour: the hottest, coldest, wettest, driest, windiest, snowiest, cleanest and most hazardous places on the planet." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Animated gradient field the theme engine recolours -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora-blob blob-a"></span>
+    <span class="aurora-blob blob-b"></span>
+    <span class="aurora-blob blob-c"></span>
+    <span class="grain"></span>
+  </div>
+
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="url(#globeGrad)" stroke-width="1.5" stroke-linecap="round">
+            <defs>
+              <linearGradient id="globeGrad" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+                <stop class="gs1" offset="0"></stop>
+                <stop class="gs2" offset="1"></stop>
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="13"></circle>
+            <g transform="rotate(-22 16 16)">
+              <ellipse cx="16" cy="16" rx="13" ry="5.3"></ellipse>
+              <ellipse cx="16" cy="16" rx="6.6" ry="12.7"></ellipse>
+              <path d="M16 3.3v25.4"></path>
+              <path d="M4.2 11.4c4 1.7 19.6 1.7 23.6 0"></path>
+              <path d="M4.2 20.6c4-1.7 19.6-1.7 23.6 0"></path>
+            </g>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <h1 class="brand-title">Earth Right&nbsp;Now</h1>
+          <p class="tagline">The planet's records... in real time.</p>
+        </div>
+      </div>
+      <div class="status">
+        <div class="switches">
+          <div class="seg" id="unit-switch" role="group" aria-label="Units">
+            <button type="button" data-units="metric">°C</button>
+            <button type="button" data-units="imperial">°F</button>
+          </div>
+          <div class="seg" id="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="pt">PT</button>
+            <button type="button" data-lang="es">ES</button>
+          </div>
+        </div>
+        <div class="status-line">
+          <span class="pulse"></span>
+          <span id="status-mood">Reading the planet…</span>
+        </div>
+        <div class="status-meta">
+          <span id="clock">--:--:--</span>
+          <span class="dot-sep">·</span>
+          <span><span id="updated-label">updated</span> <strong id="data-age">—</strong></span>
+          <button id="refresh-btn" class="refresh-btn" type="button" aria-label="Update now">
+            <span class="refresh-icon" aria-hidden="true">↻</span>
+            <span class="refresh-label">Update</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero: Thermal Shock Index -->
+    <section class="hero" id="hero" aria-label="Thermal Shock Index">
+      <span class="hero-glow" aria-hidden="true"></span>
+      <div class="hero-label term" tabindex="0">Thermal Shock Index</div>
+      <div class="hero-figure">
+        <span id="shock-delta" class="hero-delta">—</span>
+        <span class="hero-unit">°C</span>
+      </div>
+      <p class="hero-caption">the gap between the hottest and coldest points on Earth this hour</p>
+      <div class="hero-endpoints" id="hero-endpoints"></div>
+    </section>
+
+    <section class="block" id="sec-sweet" aria-labelledby="sweet-title">
+      <h2 class="section-title" id="sweet-title"><span>Where to Be Right Now</span></h2>
+      <div id="sweetspot"></div>
+    </section>
+
+    <section class="block" aria-labelledby="sec-temp">
+      <h2 class="section-title" id="sec-temp"><span>Temperature&nbsp;&amp;&nbsp;Anomalies</span></h2>
+      <div class="grid" id="grid-temperature"></div>
+    </section>
+
+    <section class="block" aria-labelledby="sec-atmo">
+      <h2 class="section-title" id="sec-atmo"><span>Atmosphere&nbsp;&amp;&nbsp;Environment</span></h2>
+      <div class="grid" id="grid-atmosphere"></div>
+    </section>
+
+    <footer class="footer">
+      <p id="footer-main"><strong>Earth Right Now</strong>... extremes computed hourly from a curated worldwide station set.</p>
+      <p class="disclaimer" id="footer-note"></p>
+    </footer>
+  </main>
+
+  <!-- Card template -->
+  <template id="card-template">
+    <article class="card" tabindex="0">
+      <span class="card-glow" aria-hidden="true"></span>
+      <div class="card-head">
+        <span class="card-kind"></span>
+        <span class="card-chip"><span class="card-icon" aria-hidden="true"></span></span>
+      </div>
+      <div class="card-readout">
+        <span class="card-value"></span>
+      </div>
+      <div class="card-context"></div>
+      <div class="card-place">
+        <span class="card-rankbadge">1</span>
+        <span class="card-flag" aria-hidden="true"></span>
+        <div class="card-place-text">
+          <span class="card-place-name"></span>
+          <span class="card-place-sub"></span>
+          <a class="card-geo" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+      <ol class="card-rank"></ol>
+      <div class="card-foot">
+        <span class="card-source"></span>
+        <span class="card-time"></span>
+      </div>
+    </article>
+  </template>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

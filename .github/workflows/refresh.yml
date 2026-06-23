@@ -1,0 +1,33 @@
+name: Refresh live data
+
+# Keeps the GitHub Pages snapshot fresh: re-runs the aggregator on a schedule
+# and commits data/extremes.json. (GitHub cron is best-effort and UTC.)
+on:
+  schedule:
+    - cron: "*/30 * * * *" # every 30 minutes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Aggregate live extremes
+        run: node scripts/aggregate.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/extremes.json
+          git diff --staged --quiet || git commit -m "chore: refresh live data [skip ci]"
+          git push
