@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-22T05:26:29.230Z",
+  "generatedAt": "2026-08-22T05:54:02.246Z",
   "source": "Open-Meteo · curated candidate stations",
   "isSample": false,
   "thermalShock": {
-    "deltaC": 44.1,
-    "deltaF": 79.4,
+    "deltaC": 45.9,
+    "deltaF": 82.6,
     "hotRef": "abs-hot",
     "coldRef": "abs-cold"
   },
@@ -15,12 +15,12 @@
       "kind": "heat",
       "title": "Absolute Highest",
       "subtitle": "Hottest point on Earth",
-      "value": 38.5,
+      "value": 40.2,
       "unit": "°C",
-      "display": "38.5°C",
-      "displayImp": "101.3°F",
-      "context": "101.3°F",
-      "contextImp": "38.5°C",
+      "display": "40.2°C",
+      "displayImp": "104.4°F",
+      "context": "104.4°F",
+      "contextImp": "40.2°C",
       "location": {
         "name": "Dubai",
         "region": "Dubai",
@@ -29,7 +29,7 @@
         "lat": 25.2,
         "lon": 55.27
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -38,29 +38,29 @@
           "region": "Dubai",
           "country": "United Arab Emirates",
           "cc": "AE",
-          "value": 38.5,
-          "display": "38.5°C",
-          "displayImp": "101.3°F"
+          "value": 40.2,
+          "display": "40.2°C",
+          "displayImp": "104.4°F"
         },
         {
           "rank": 2,
-          "name": "Mexicali",
-          "region": "Baja California",
-          "country": "Mexico",
-          "cc": "MX",
-          "value": 37.1,
-          "display": "37.1°C",
-          "displayImp": "98.8°F"
-        },
-        {
-          "rank": 3,
           "name": "Phoenix",
           "region": "Arizona",
           "country": "United States",
           "cc": "US",
-          "value": 36.9,
-          "display": "36.9°C",
-          "displayImp": "98.4°F"
+          "value": 37.3,
+          "display": "37.3°C",
+          "displayImp": "99.1°F"
+        },
+        {
+          "rank": 3,
+          "name": "Mexicali",
+          "region": "Baja California",
+          "country": "Mexico",
+          "cc": "MX",
+          "value": 37,
+          "display": "37.0°C",
+          "displayImp": "98.6°F"
         },
         {
           "rank": 4,
@@ -68,19 +68,19 @@
           "region": "Al Asimah",
           "country": "Kuwait",
           "cc": "KW",
-          "value": 35.9,
-          "display": "35.9°C",
-          "displayImp": "96.6°F"
+          "value": 36.8,
+          "display": "36.8°C",
+          "displayImp": "98.2°F"
         },
         {
           "rank": 5,
-          "name": "Dammam",
-          "region": "Eastern Province",
-          "country": "Saudi Arabia",
-          "cc": "SA",
-          "value": 35.3,
-          "display": "35.3°C",
-          "displayImp": "95.5°F"
+          "name": "Basra",
+          "region": "Basra",
+          "country": "Iraq",
+          "cc": "IQ",
+          "value": 36.5,
+          "display": "36.5°C",
+          "displayImp": "97.7°F"
         }
       ]
     },
@@ -90,12 +90,12 @@
       "kind": "cold",
       "title": "Absolute Lowest",
       "subtitle": "Coldest point on Earth",
-      "value": -5.6,
+      "value": -5.7,
       "unit": "°C",
-      "display": "-5.6°C",
-      "displayImp": "21.9°F",
-      "context": "21.9°F",
-      "contextImp": "-5.6°C",
+      "display": "-5.7°C",
+      "displayImp": "21.7°F",
+      "context": "21.7°F",
+      "contextImp": "-5.7°C",
       "location": {
         "name": "La Rinconada",
         "region": "Puno",
@@ -104,7 +104,7 @@
         "lat": -14.63,
         "lon": -69.44
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -113,9 +113,9 @@
           "region": "Puno",
           "country": "Peru",
           "cc": "PE",
-          "value": -5.6,
-          "display": "-5.6°C",
-          "displayImp": "21.9°F"
+          "value": -5.7,
+          "display": "-5.7°C",
+          "displayImp": "21.7°F"
         },
         {
           "rank": 2,
@@ -123,9 +123,9 @@
           "region": "Aysén",
           "country": "Chile",
           "cc": "CL",
-          "value": -4,
-          "display": "-4.0°C",
-          "displayImp": "24.8°F"
+          "value": -4.2,
+          "display": "-4.2°C",
+          "displayImp": "24.4°F"
         },
         {
           "rank": 3,
@@ -133,9 +133,9 @@
           "region": "Chubut",
           "country": "Argentina",
           "cc": "AR",
-          "value": -1.1,
-          "display": "-1.1°C",
-          "displayImp": "30.0°F"
+          "value": -1.3,
+          "display": "-1.3°C",
+          "displayImp": "29.7°F"
         },
         {
           "rank": 4,
@@ -143,9 +143,9 @@
           "region": "La Paz",
           "country": "Bolivia",
           "cc": "BO",
-          "value": -0.7,
-          "display": "-0.7°C",
-          "displayImp": "30.7°F"
+          "value": -1.2,
+          "display": "-1.2°C",
+          "displayImp": "29.8°F"
         },
         {
           "rank": 5,
@@ -153,9 +153,9 @@
           "region": "La Paz",
           "country": "Bolivia",
           "cc": "BO",
-          "value": 1.2,
-          "display": "1.2°C",
-          "displayImp": "34.2°F"
+          "value": 0.9,
+          "display": "0.9°C",
+          "displayImp": "33.6°F"
         }
       ]
     },
@@ -165,11 +165,11 @@
       "kind": "feels",
       "title": "Most Dangerous Heat",
       "subtitle": "Highest feels-like temperature",
-      "value": 43.5,
+      "value": 43.8,
       "unit": "°C",
-      "display": "43.5°C",
-      "displayImp": "110.3°F",
-      "context": "Feels like · 110°F",
+      "display": "43.8°C",
+      "displayImp": "110.8°F",
+      "context": "Feels like · 111°F",
       "contextImp": "Feels like · 44°C",
       "location": {
         "name": "Dubai",
@@ -179,7 +179,7 @@
         "lat": 25.2,
         "lon": 55.27
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -188,9 +188,9 @@
           "region": "Dubai",
           "country": "United Arab Emirates",
           "cc": "AE",
-          "value": 43.5,
-          "display": "43.5°C",
-          "displayImp": "110.3°F"
+          "value": 43.8,
+          "display": "43.8°C",
+          "displayImp": "110.8°F"
         },
         {
           "rank": 2,
@@ -198,39 +198,39 @@
           "region": "Dhaka",
           "country": "Bangladesh",
           "cc": "BD",
-          "value": 40.1,
-          "display": "40.1°C",
-          "displayImp": "104.2°F"
+          "value": 40.9,
+          "display": "40.9°C",
+          "displayImp": "105.6°F"
         },
         {
           "rank": 3,
-          "name": "Kolkata",
-          "region": "West Bengal",
-          "country": "India",
-          "cc": "IN",
-          "value": 39.5,
-          "display": "39.5°C",
-          "displayImp": "103.1°F"
-        },
-        {
-          "rank": 4,
-          "name": "Jakarta",
-          "region": "Jakarta",
-          "country": "Indonesia",
-          "cc": "ID",
-          "value": 38.7,
-          "display": "38.7°C",
-          "displayImp": "101.7°F"
-        },
-        {
-          "rank": 5,
           "name": "Nawabshah",
           "region": "Sindh",
           "country": "Pakistan",
           "cc": "PK",
-          "value": 38.3,
-          "display": "38.3°C",
-          "displayImp": "100.9°F"
+          "value": 39.7,
+          "display": "39.7°C",
+          "displayImp": "103.5°F"
+        },
+        {
+          "rank": 4,
+          "name": "Kolkata",
+          "region": "West Bengal",
+          "country": "India",
+          "cc": "IN",
+          "value": 39.6,
+          "display": "39.6°C",
+          "displayImp": "103.3°F"
+        },
+        {
+          "rank": 5,
+          "name": "Jacobabad",
+          "region": "Sindh",
+          "country": "Pakistan",
+          "cc": "PK",
+          "value": 39,
+          "display": "39.0°C",
+          "displayImp": "102.2°F"
         }
       ]
     },
@@ -240,10 +240,10 @@
       "kind": "heat",
       "title": "Hottest Major City",
       "subtitle": "Urban area over 1M people",
-      "value": 38.5,
+      "value": 40.2,
       "unit": "°C",
-      "display": "38.5°C",
-      "displayImp": "101.3°F",
+      "display": "40.2°C",
+      "displayImp": "104.4°F",
       "context": "Pop. 3.5M",
       "contextImp": "Pop. 3.5M",
       "location": {
@@ -254,7 +254,7 @@
         "lat": 25.2,
         "lon": 55.27
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -263,29 +263,29 @@
           "region": "Dubai",
           "country": "United Arab Emirates",
           "cc": "AE",
-          "value": 38.5,
-          "display": "38.5°C",
-          "displayImp": "101.3°F"
+          "value": 40.2,
+          "display": "40.2°C",
+          "displayImp": "104.4°F"
         },
         {
           "rank": 2,
-          "name": "Mexicali",
-          "region": "Baja California",
-          "country": "Mexico",
-          "cc": "MX",
-          "value": 37.1,
-          "display": "37.1°C",
-          "displayImp": "98.8°F"
-        },
-        {
-          "rank": 3,
           "name": "Phoenix",
           "region": "Arizona",
           "country": "United States",
           "cc": "US",
-          "value": 36.9,
-          "display": "36.9°C",
-          "displayImp": "98.4°F"
+          "value": 37.3,
+          "display": "37.3°C",
+          "displayImp": "99.1°F"
+        },
+        {
+          "rank": 3,
+          "name": "Mexicali",
+          "region": "Baja California",
+          "country": "Mexico",
+          "cc": "MX",
+          "value": 37,
+          "display": "37.0°C",
+          "displayImp": "98.6°F"
         },
         {
           "rank": 4,
@@ -293,19 +293,19 @@
           "region": "Al Asimah",
           "country": "Kuwait",
           "cc": "KW",
-          "value": 35.9,
-          "display": "35.9°C",
-          "displayImp": "96.6°F"
+          "value": 36.8,
+          "display": "36.8°C",
+          "displayImp": "98.2°F"
         },
         {
           "rank": 5,
-          "name": "Dammam",
-          "region": "Eastern Province",
-          "country": "Saudi Arabia",
-          "cc": "SA",
-          "value": 35.3,
-          "display": "35.3°C",
-          "displayImp": "95.5°F"
+          "name": "Basra",
+          "region": "Basra",
+          "country": "Iraq",
+          "cc": "IQ",
+          "value": 36.5,
+          "display": "36.5°C",
+          "displayImp": "97.7°F"
         }
       ]
     },
@@ -315,10 +315,10 @@
       "kind": "cold",
       "title": "Coldest Major City",
       "subtitle": "Urban area over 1M people",
-      "value": 1.2,
+      "value": 0.9,
       "unit": "°C",
-      "display": "1.2°C",
-      "displayImp": "34.2°F",
+      "display": "0.9°C",
+      "displayImp": "33.6°F",
       "context": "Pop. 1.9M",
       "contextImp": "Pop. 1.9M",
       "location": {
@@ -329,7 +329,7 @@
         "lat": -16.5,
         "lon": -68.13
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -338,9 +338,9 @@
           "region": "La Paz",
           "country": "Bolivia",
           "cc": "BO",
-          "value": 1.2,
-          "display": "1.2°C",
-          "displayImp": "34.2°F"
+          "value": 0.9,
+          "display": "0.9°C",
+          "displayImp": "33.6°F"
         },
         {
           "rank": 2,
@@ -348,9 +348,9 @@
           "region": "Pichincha",
           "country": "Ecuador",
           "cc": "EC",
-          "value": 9.9,
-          "display": "9.9°C",
-          "displayImp": "49.8°F"
+          "value": 9.4,
+          "display": "9.4°C",
+          "displayImp": "48.9°F"
         },
         {
           "rank": 3,
@@ -358,9 +358,9 @@
           "region": "Cundinamarca",
           "country": "Colombia",
           "cc": "CO",
-          "value": 13.6,
-          "display": "13.6°C",
-          "displayImp": "56.5°F"
+          "value": 13.3,
+          "display": "13.3°C",
+          "displayImp": "55.9°F"
         },
         {
           "rank": 4,
@@ -368,9 +368,9 @@
           "region": "Moscow",
           "country": "Russia",
           "cc": "RU",
-          "value": 15.3,
-          "display": "15.3°C",
-          "displayImp": "59.5°F"
+          "value": 16.3,
+          "display": "16.3°C",
+          "displayImp": "61.3°F"
         },
         {
           "rank": 5,
@@ -390,10 +390,10 @@
       "kind": "heat",
       "title": "Hottest vs Normal",
       "subtitle": "vs June average",
-      "value": 12.5,
+      "value": 12.8,
       "unit": "°C",
-      "display": "+12.5°C",
-      "displayImp": "+22.5°F",
+      "display": "+12.8°C",
+      "displayImp": "+23.0°F",
       "context": "33°C now · 20°C normal",
       "contextImp": "91°F now · 68°F normal",
       "location": {
@@ -404,7 +404,7 @@
         "lat": -21.18,
         "lon": 119.74
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -413,9 +413,9 @@
           "region": "Western Australia",
           "country": "Australia",
           "cc": "AU",
-          "value": 12.5,
-          "display": "+12.5°C",
-          "displayImp": "+22.5°F"
+          "value": 12.8,
+          "display": "+12.8°C",
+          "displayImp": "+23.0°F"
         },
         {
           "rank": 2,
@@ -423,9 +423,9 @@
           "region": "Heilongjiang",
           "country": "China",
           "cc": "CN",
-          "value": 7.6,
-          "display": "+7.6°C",
-          "displayImp": "+13.7°F"
+          "value": 7.9,
+          "display": "+7.9°C",
+          "displayImp": "+14.2°F"
         },
         {
           "rank": 3,
@@ -433,9 +433,9 @@
           "region": "Jakarta",
           "country": "Indonesia",
           "cc": "ID",
-          "value": 7.4,
-          "display": "+7.4°C",
-          "displayImp": "+13.3°F"
+          "value": 7.2,
+          "display": "+7.2°C",
+          "displayImp": "+13.0°F"
         },
         {
           "rank": 4,
@@ -443,9 +443,9 @@
           "region": "Queensland",
           "country": "Australia",
           "cc": "AU",
-          "value": 6.9,
-          "display": "+6.9°C",
-          "displayImp": "+12.4°F"
+          "value": 7,
+          "display": "+7.0°C",
+          "displayImp": "+12.6°F"
         },
         {
           "rank": 5,
@@ -453,9 +453,9 @@
           "region": "Ulaanbaatar",
           "country": "Mongolia",
           "cc": "MN",
-          "value": 6.7,
-          "display": "+6.7°C",
-          "displayImp": "+12.1°F"
+          "value": 6.9,
+          "display": "+6.9°C",
+          "displayImp": "+12.4°F"
         }
       ]
     },
@@ -465,12 +465,12 @@
       "kind": "cold",
       "title": "Coldest vs Normal",
       "subtitle": "vs June average",
-      "value": -7.3,
+      "value": -7.5,
       "unit": "°C",
-      "display": "-7.3°C",
-      "displayImp": "-13.1°F",
+      "display": "-7.5°C",
+      "displayImp": "-13.5°F",
       "context": "25°C now · 33°C normal",
-      "contextImp": "78°F now · 91°F normal",
+      "contextImp": "77°F now · 91°F normal",
       "location": {
         "name": "Niamey",
         "region": "Niamey",
@@ -479,7 +479,7 @@
         "lat": 13.51,
         "lon": 2.11
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -488,29 +488,29 @@
           "region": "Niamey",
           "country": "Niger",
           "cc": "NE",
-          "value": -7.3,
-          "display": "-7.3°C",
-          "displayImp": "-13.1°F"
+          "value": -7.5,
+          "display": "-7.5°C",
+          "displayImp": "-13.5°F"
         },
         {
           "rank": 2,
-          "name": "Bandar-e Mahshahr",
-          "region": "Khuzestan",
-          "country": "Iran",
-          "cc": "IR",
-          "value": -7.2,
-          "display": "-7.2°C",
-          "displayImp": "-13.0°F"
-        },
-        {
-          "rank": 3,
           "name": "La Paz",
           "region": "La Paz",
           "country": "Bolivia",
           "cc": "BO",
-          "value": -7.1,
-          "display": "-7.1°C",
-          "displayImp": "-12.8°F"
+          "value": -7.4,
+          "display": "-7.4°C",
+          "displayImp": "-13.3°F"
+        },
+        {
+          "rank": 3,
+          "name": "El Alto",
+          "region": "La Paz",
+          "country": "Bolivia",
+          "cc": "BO",
+          "value": -6.9,
+          "display": "-6.9°C",
+          "displayImp": "-12.4°F"
         },
         {
           "rank": 4,
@@ -518,19 +518,19 @@
           "region": "Tombouctou",
           "country": "Mali",
           "cc": "ML",
-          "value": -6.6,
-          "display": "-6.6°C",
-          "displayImp": "-11.9°F"
+          "value": -6.7,
+          "display": "-6.7°C",
+          "displayImp": "-12.1°F"
         },
         {
           "rank": 5,
-          "name": "El Alto",
-          "region": "La Paz",
-          "country": "Bolivia",
-          "cc": "BO",
-          "value": -6.4,
-          "display": "-6.4°C",
-          "displayImp": "-11.5°F"
+          "name": "Bandar-e Mahshahr",
+          "region": "Khuzestan",
+          "country": "Iran",
+          "cc": "IR",
+          "value": -5.8,
+          "display": "-5.8°C",
+          "displayImp": "-10.4°F"
         }
       ]
     },
@@ -540,7 +540,7 @@
       "kind": "humid",
       "title": "Most Saturated",
       "subtitle": "Highest dew point",
-      "value": 28.3,
+      "value": 28.4,
       "unit": "°C",
       "display": "28°C",
       "displayImp": "83°F",
@@ -554,7 +554,7 @@
         "lat": 25.64,
         "lon": 57.77
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -563,7 +563,7 @@
           "region": "Hormozgan",
           "country": "Iran",
           "cc": "IR",
-          "value": 28.3,
+          "value": 28.4,
           "display": "28°C",
           "displayImp": "83°F"
         },
@@ -573,7 +573,7 @@
           "region": "Dhaka",
           "country": "Bangladesh",
           "cc": "BD",
-          "value": 26.7,
+          "value": 26.6,
           "display": "27°C",
           "displayImp": "80°F"
         },
@@ -589,23 +589,23 @@
         },
         {
           "rank": 4,
-          "name": "Lahore",
-          "region": "Punjab",
-          "country": "Pakistan",
-          "cc": "PK",
-          "value": 25.8,
-          "display": "26°C",
-          "displayImp": "78°F"
-        },
-        {
-          "rank": 5,
           "name": "Padang",
           "region": "West Sumatra",
           "country": "Indonesia",
           "cc": "ID",
-          "value": 25.5,
+          "value": 26.1,
           "display": "26°C",
-          "displayImp": "78°F"
+          "displayImp": "79°F"
+        },
+        {
+          "rank": 5,
+          "name": "Lahore",
+          "region": "Punjab",
+          "country": "Pakistan",
+          "cc": "PK",
+          "value": 26,
+          "display": "26°C",
+          "displayImp": "79°F"
         }
       ]
     },
@@ -615,10 +615,10 @@
       "kind": "dry",
       "title": "Driest Air",
       "subtitle": "Lowest relative humidity",
-      "value": 12,
+      "value": 11,
       "unit": "%",
-      "display": "12%",
-      "displayImp": "12%",
+      "display": "11%",
+      "displayImp": "11%",
       "context": "Relative humidity",
       "contextImp": "Relative humidity",
       "location": {
@@ -629,7 +629,7 @@
         "lat": 24.71,
         "lon": 46.68
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -638,12 +638,22 @@
           "region": "Riyadh",
           "country": "Saudi Arabia",
           "cc": "SA",
-          "value": 12,
-          "display": "12%",
-          "displayImp": "12%"
+          "value": 11,
+          "display": "11%",
+          "displayImp": "11%"
         },
         {
           "rank": 2,
+          "name": "Basra",
+          "region": "Basra",
+          "country": "Iraq",
+          "cc": "IQ",
+          "value": 15,
+          "display": "15%",
+          "displayImp": "15%"
+        },
+        {
+          "rank": 3,
           "name": "Adrar",
           "region": "Adrar",
           "country": "Algeria",
@@ -651,16 +661,6 @@
           "value": 15,
           "display": "15%",
           "displayImp": "15%"
-        },
-        {
-          "rank": 3,
-          "name": "Basra",
-          "region": "Basra",
-          "country": "Iraq",
-          "cc": "IQ",
-          "value": 17,
-          "display": "17%",
-          "displayImp": "17%"
         },
         {
           "rank": 4,
@@ -678,9 +678,9 @@
           "region": "Aswan",
           "country": "Egypt",
           "cc": "EG",
-          "value": 20,
-          "display": "20%",
-          "displayImp": "20%"
+          "value": 17,
+          "display": "17%",
+          "displayImp": "17%"
         }
       ]
     },
@@ -704,7 +704,7 @@
         "lat": 64.15,
         "lon": -21.94
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -779,7 +779,7 @@
         "lat": -54.8,
         "lon": -68.3
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -810,10 +810,10 @@
       "kind": "wind",
       "title": "Strongest Wind",
       "subtitle": "Highest active gust",
-      "value": 77.8,
+      "value": 75.2,
       "unit": "km/h",
-      "display": "78 km/h",
-      "displayImp": "48 mph",
+      "display": "75 km/h",
+      "displayImp": "47 mph",
       "context": "Peak gust · last hour",
       "contextImp": "Peak gust · last hour",
       "location": {
@@ -824,7 +824,7 @@
         "lat": -41.29,
         "lon": 174.78
       },
-      "observedAt": "2026-08-22T05:15:00.000Z",
+      "observedAt": "2026-08-22T05:45:00.000Z",
       "source": "Open-Meteo",
       "ranking": [
         {
@@ -833,9 +833,9 @@
           "region": "Wellington",
           "country": "New Zealand",
           "cc": "NZ",
-          "value": 77.8,
-          "display": "78 km/h",
-          "displayImp": "48 mph"
+          "value": 75.2,
+          "display": "75 km/h",
+          "displayImp": "47 mph"
         },
         {
           "rank": 2,
@@ -843,8 +843,8 @@
           "region": "Metro Manila",
           "country": "Philippines",
           "cc": "PH",
-          "value": 55.8,
-          "display": "56 km/h",
+          "value": 56.9,
+          "display": "57 km/h",
           "displayImp": "35 mph"
         },
         {
@@ -853,8 +853,8 @@
           "region": "Tasmania",
           "country": "Australia",
           "cc": "AU",
-          "value": 55.1,
-          "display": "55 km/h",
+          "value": 54.4,
+          "display": "54 km/h",
           "displayImp": "34 mph"
         },
         {
@@ -863,8 +863,8 @@
           "region": "Capital Region",
           "country": "Iceland",
           "cc": "IS",
-          "value": 42.1,
-          "display": "42 km/h",
+          "value": 41.4,
+          "display": "41 km/h",
           "displayImp": "26 mph"
         },
         {
@@ -873,9 +873,9 @@
           "region": "Tierra del Fuego",
           "country": "Argentina",
           "cc": "AR",
-          "value": 40.7,
-          "display": "41 km/h",
-          "displayImp": "25 mph"
+          "value": 39.2,
+          "display": "39 km/h",
+          "displayImp": "24 mph"
         }
       ]
     },
@@ -1032,78 +1032,78 @@
   ],
   "sweetSpot": {
     "title": "Where to Be Right Now",
-    "display": "91",
-    "score": 90.6,
-    "context": "Feels 25°C · AQI 43 · 49% humidity · daytime",
+    "display": "92",
+    "score": 91.8,
+    "context": "Feels 22°C · AQI 40 · 40% humidity · night",
     "location": {
-      "name": "Tbilisi",
+      "name": "Denver",
       "region": "",
-      "country": "Georgia",
-      "cc": "GE",
-      "lat": 41.72,
-      "lon": 44.79
+      "country": "United States",
+      "cc": "US",
+      "lat": 39.74,
+      "lon": -104.99
     },
-    "observedAt": "2026-08-22T05:26:29.438Z",
+    "observedAt": "2026-08-22T05:54:02.392Z",
     "source": "Open-Meteo",
     "ranking": [
       {
         "rank": 1,
-        "name": "Tbilisi",
-        "country": "Georgia",
-        "cc": "GE",
-        "score": 90.6,
-        "display": "91",
-        "feels": 25,
-        "aqi": 43,
-        "humidity": 49,
-        "isDay": true
-      },
-      {
-        "rank": 2,
-        "name": "Funchal",
-        "country": "Portugal",
-        "cc": "PT",
-        "score": 90.5,
-        "display": "91",
-        "feels": 22,
-        "aqi": 30,
-        "humidity": 57,
-        "isDay": false
-      },
-      {
-        "rank": 3,
         "name": "Denver",
         "country": "United States",
         "cc": "US",
-        "score": 90,
-        "display": "90",
-        "feels": 21,
+        "score": 91.8,
+        "display": "92",
+        "feels": 22,
         "aqi": 40,
-        "humidity": 36,
+        "humidity": 40,
         "isDay": false
       },
       {
-        "rank": 4,
+        "rank": 2,
         "name": "Nice",
         "country": "France",
         "cc": "FR",
-        "score": 89.3,
-        "display": "89",
-        "feels": 18,
+        "score": 91.3,
+        "display": "91",
+        "feels": 19,
         "aqi": 23,
-        "humidity": 52,
+        "humidity": 54,
         "isDay": true
       },
       {
+        "rank": 3,
+        "name": "Tbilisi",
+        "country": "Georgia",
+        "cc": "GE",
+        "score": 90,
+        "display": "90",
+        "feels": 25,
+        "aqi": 43,
+        "humidity": 48,
+        "isDay": true
+      },
+      {
+        "rank": 4,
+        "name": "Funchal",
+        "country": "Portugal",
+        "cc": "PT",
+        "score": 89.4,
+        "display": "89",
+        "feels": 22,
+        "aqi": 30,
+        "humidity": 59,
+        "isDay": false
+      },
+      {
         "rank": 5,
-        "name": "Sydney",
+        "name": "Perth",
         "country": "Australia",
         "cc": "AU",
-        "score": 87.9,
+        "score": 88.3,
         "display": "88",
-        "feels": 20,
-        "aqi": 64,
-        "humidity": 46,
+        "feels": 21,
+        "aqi": 22,
+        "humidity": 68,
         "isDay": true
       }
     ]
